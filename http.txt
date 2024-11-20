@@ -1,0 +1,54 @@
+What is HTTP?
+
+Introduction:
+In websites there is communication between server and client. Means we(the client). The communication start by client by sending request to the server.
+
+When websites came first(before browsers) they were accessed by command line interface, Means we send request to server by typing commands in command line interface. 
+
+But there should be condition or rule written in server which accepts request from client(by internet) and then respond according to the request that client send.
+
+
+Early web and its challenges:
+Suppose that there were firstly 3 websites, web A, web B, web C. So there should be 3 rules or conditions means each rule or condition for each website written in server which accepts request from client and then respond according to the request.
+
+Suppose web A write in server that if request is (Req:Home) then return home page.
+web B write in server that if request is (Need-Main) then return home page.
+web C write in server that if request is (Send>home) then return home page.
+This gives arise to a problem that each website has different conditions or rules to access there home page. 
+By which client have to learn each website rules or conditions to access there home page. Which is not good for client if there are thousands of websites.
+
+So to solve this problem HTTP came into existence, HTTP is a format to write request. Which means client should only need to know what to access and from which server to access, but request format is same.
+
+When we write any url in our browsers , it is converted into HTTP request by browser. Which is then send to server. Server then check and respond.
+and if you might have noticed that when we write url Suppose https://www.youtube.com/ there is / after .com which is information of what we want to get from server and in all the website server nowadays there is written if request has / then return home(index.html) page.
+
+We learned about what is HTTP now it's time to look how HTTP request looks like,
+
+GET /index.html HTTP/1.1
+Host: www.example.com
+
+1. GET: The HTTP method, indicating the action the client wants (in this case, to get a resource).
+2. /index.html: The path to the resource (in this case, the homepage of the website).
+3. HTTP/1.1: The version of the HTTP protocol being used.
+4. Host: www.example.com: The domain name of the server.
+
+then server return code for e.g.
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1024
+
+<!DOCTYPE html>
+<html>
+<body>
+</body>
+</html>
+
+1. HTTP/1.1 200 OK: The server indicates that the request was successful (status code 200).
+2. Content-Type: The type of content being sent (in this case, HTML).
+3. Content-Length: The size of the response body (1024 bytes).
+
+
+Summary:
+HTTP is a format of request which is used by client to send request to server. Which is then responded by server.
+
